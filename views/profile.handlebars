@@ -1,0 +1,20 @@
+
+{{> header}}
+
+
+    <main>
+        {{> sortbar}}
+        <div id="container">
+            <div id="mainDiv">
+                {{#each card}}
+                    {{> eachcardsorted }}
+                {{/each}}
+            </div>
+
+            {{> sidebar }}
+ 
+        </div>
+    </main>
+
+<script src="/js/newCard.js"></script>
+<script src="/js/profile.js"></script>

@@ -1,0 +1,26 @@
+
+<div id="rightDiv">
+                <h3>My Dashboard</h3>
+                <button id="createCard">Create a card</button>
+                <!-- The Modal -->
+                <div id="createCardModal" class="modal">
+                <!-- Modal content -->
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form id="newCardForm">
+                            <h3 id="form">Create a new card</h3>
+                            <input type="text" name="name" placeholder="Event Name" id="newCardName"><br>
+                            <input type="time" name="time" placeholder="Enter a Time: 00:00:00" id="newCardTime"><br>
+                            <input type="date" name="date" placeholder="Enter a Date: 00:00:00" id="newCardDate"><br>
+                            <textarea id="newCardDescription" placeholder="Description" data-id={{id}}></textarea><br>
+                            <div id="footer">
+                            {{> widget}}
+                            <button id="newCardPost">Post</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                {{> mycards }}
+                </div>
+            </div>

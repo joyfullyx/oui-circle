@@ -1,0 +1,34 @@
+<header id="header">
+    <div id="nav">
+        <div id="header-left"></div>
+        <div id="logo">
+                <a href="/profile">
+                <h1>CIRCLE</h1>
+                <h3>COMMUNITY BULLETIN</h3>
+                </a>
+                <div class="halfCircle">
+                    <img src="../assets/circlebg.svg"> 
+                </div>
+                {{!--<div class="color">
+                    <img src="/assets/circle_red.svg">
+                </div>
+                <div class="color2">
+                    <img src="/assets/circle_purple.svg">
+                </div> --}}
+                <div class="circles" id="circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    
+                    <aside class="warning">
+                        <span>View in Chrome, Firefox or Safari for the best effect!</span>
+                    </aside>
+                </div>
+        </div>
+        <div id="header-right">
+            <p>{{#if logged_in}}Welcome {{username}} &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/logout">Log Out</a>{{/if}}{{#unless logged_in}}<a href="/login" target="_parent">Log In</a> &nbsp;&nbsp;|&nbsp;&nbsp;<a href="/signup">Sign Up</a>{{/unless}}</p>
+        </div>
+
+    </div>
+</header>

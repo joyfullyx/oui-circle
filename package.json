@@ -1,0 +1,39 @@
+{
+  "name": "project-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joyfullyx/project-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joyfullyx/project-2/issues"
+  },
+  "homepage": "https://github.com/joyfullyx/project-2#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary-core": "^2.11.4",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.0",
+    "express-session": "^1.17.1",
+    "geoip-lite": "^1.4.2",
+    "geolocation": "^0.2.0",
+    "moment": "^2.29.1",
+    "mysql2": "^2.2.5",
+    "nodemon": "^2.0.7",
+    "request": "^2.88.2",
+    "sequelize": "^6.6.2"
+  }
+}

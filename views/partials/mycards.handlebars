@@ -1,0 +1,37 @@
+
+{{#if myCards}}
+<h4>My Cards</h4>
+{{/if}}
+
+{{#each myCards}}
+<a class="sideCard" href="/cards/{{id}}" id="{{id}}"><div class="sideCard">
+    <p>{{event_name}}</p>
+</div></a>
+<div class="sideCardPost">
+    <p class="myCardEdit" id="editCardBtn" data-id={{id}}>edit</p>
+    <p class="sideDelBtn" data-id={{id}}>Delete</p>
+</div>
+
+     <div id="editCardModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="editClose">&times;</span>
+            <form id="editCardForm">
+                <h3 id="editCardForm">Edit your card</h3>
+                <input type="text" name="name" id="editCardName"><br>
+                <textarea id="editCardDescription" data-id={{id}}></textarea><br>
+                <div id="footer">
+                {{> widget}}
+                <button id="editCardPut">Save edits</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{{/each}}
+
+
+
+
+<script src="/js/profile.js"></script>
+<script src="/js/mycards.js"></script>
+<script src="/js/editCard.js"></script>

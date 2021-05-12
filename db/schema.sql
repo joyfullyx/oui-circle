@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS circles_db;
+
+CREATE DATABASE circles_db;

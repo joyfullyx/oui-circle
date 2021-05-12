@@ -1,0 +1,829 @@
+@import url("https://use.typekit.net/ofu1bcp.css");
+
+/* ------------------------------------------*/
+/* BASIC PAGE ELEMENTS ----------------------*/
+/*------------------------------------------*/
+
+body {
+    background-color: #f1f1f1;
+}
+
+header {
+    background-color: #23262F;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#header-left, #header-right {
+    width: 250px;
+}
+
+main {
+    background: #f1f1f1;
+}
+
+
+/*------------------------------------------*/
+/* FILTER BAR ------------------------------*/
+/*------------------------------------------*/
+
+.filterbar li {
+    display:inline;
+    color: #23262F;
+    font-family: 'brandon grotesque', sans-serif;
+    font-weight: bold;
+    font-size: .8em;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filterbar li:hover {
+    color: #c62a23;
+    cursor: pointer;
+}
+
+.filterbar li:active {
+    color: #44f321;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.filterbar ul {
+    padding: 50px 50px 0 50px;
+}
+
+/*------------------------------------------*/
+/* HEADER     ------------------------------*/
+/*------------------------------------------*/
+
+#nav {
+    background-color: #151517;
+    width: 100%;
+    height: 35px;
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#logo {
+    /* background-image: url(../assets/circlebg.svg); */
+    height: 6em;
+    width: 20em;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: #23262F;
+    position: relative;
+    bottom: -1px;
+    /* border:2px solid pink; */
+}
+
+#logo a {
+    position: absolute;
+    width: 20em;
+    height: 6em;
+    z-index: 3;
+    text-align: center;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-decoration: none;
+}
+
+.halfCircle {
+    height: 4.5em;
+    width: 16.5em;
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    z-index: 1;
+    bottom:0;
+    left:0;
+    right:0;
+}
+
+.color {
+    height: 8em;
+    width: 20em;
+    position: absolute;
+    mix-blend-mode: screen;
+    z-index: 0;
+    clip-path: polygon(0% 0, 100% 0%, 100% 80%, 0% 80%);
+}
+
+.color2 {
+    height: 8em;
+    width: 20em;
+    position: absolute;
+    mix-blend-mode: screen;
+    z-index: 0;    
+    clip-path: polygon(0% 0, 100% 0%, 100% 80%, 0% 80%);
+}
+
+.color2 img {
+    width:100%;
+}
+.color img {
+    width:100%;
+}
+
+#logo H1 {
+    /* position: relative; */
+    font-size: 2.2em;
+    font-family: 'brandon grotesque', sans-serif;
+    font-weight: bold;
+    /* position: absolute; */
+    bottom: 0;
+    text-align: center;
+    /* left: 50%; */
+    color:#c62a23;
+}
+
+#logo H3 {
+    /* position: relative; */
+    font-size: .7em;
+    font-family: 'brandon grotesque', sans-serif;
+    font-weight: bold;
+    /* position: absolute; */
+    bottom: 0px;
+    text-align: center;
+    /* left: 50px; */
+    color:#c62a23;
+}
+
+#header-right {
+    width: 250px;
+    height: 30px;
+}
+
+#header-right p {
+    color: #bdbdbd;
+    height: 40px;
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .8em;
+    padding-top:6px;
+    text-align: right;
+    margin-right: 50px;
+}
+
+#header-right a:link, a:visited {
+    color: #bdbdbd;
+}
+
+button {
+    display: inline-block;
+    border: none;
+    padding: .5rem 1.5rem;
+    width: 100%;
+    margin: 0;
+    text-decoration: none;
+    background: #c62a23;
+    color: #ffffff;
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 6px;
+}
+
+/*------------------------------------------*/
+/* SIDE BAR   ------------------------------*/
+/*------------------------------------------*/
+
+.sideCard {
+    display: table;
+    border: none;
+    /* padding: .5rem .8rem; */
+    width: 100%;
+    height: 40px;
+    margin: 5px 0 0 0;
+    text-decoration: none;
+    background: #fff;
+    color: #23262F;
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 6px 6px 0 0;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.5),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+}
+
+.sideCard p {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    margin:5px 5px 5px 0;
+    font-size: .9em;
+    font-family: 'brandon grotesque', sans-serif;
+    color:#23262F;
+}
+
+.sideCard a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.sideCardPost {
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+    background-color:#23262F;
+    color:#e0e0e0;
+    border-radius: 0 0 6px 6px;
+}
+
+.sideCardPost p {
+    text-align: center;
+    min-height: 20px;
+    width: 50%;
+    padding:0px 5px 0px 5px;
+    margin:0px;
+    line-height: 20px;
+    font-family: 'brandon grotesque', sans-serif;
+    color:#888;
+    display: inline-block;
+    font-size: .5em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.sideCardPost p:hover {
+    background-color:#3d4354;
+}
+
+
+
+#mainDiv {
+    /* background-color:pink; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+    height: 70vh;
+    position: relative;
+}
+#rightDiv {
+    /* background-color:lightblue; */
+    width: 230px;
+    padding: 0 20px 0 20px;
+    border-left: 1pt solid lightgrey;
+    height:70vh;
+}
+
+#rightDiv h3 {
+    color: #23262F;
+    font-family: 'brandon grotesque', sans-serif;
+    font-weight: bold;
+    font-size: .8em;
+    cursor: pointer;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+#rightDiv h4 {
+    color: #23262F;
+    font-family: 'brandon grotesque', sans-serif;
+    font-weight: bold;
+    font-size: .8em;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin:0;
+    padding-left:0;
+}
+
+#container {
+    width: 95%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-wrap:nowrap;
+    padding:20px;
+    justify-content:center;
+}
+
+/* CARD STYLES ----------------------------*/
+.card {
+    width: 250px;
+    height: 160px;
+    margin: 10px;
+    padding-bottom: 0;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+#fade {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 4.5em;
+    /* background-color:pink; */
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 60%);
+  } 
+
+  #info {
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1.5em;
+    position: absolute;
+    z-index: 11;
+    border-radius: 0 0 6px 6px;
+    background-color: #23262F;
+  }
+
+.card-header h3 {
+    font-family: 'brandon grotesque', sans-serif;
+    font-weight: bold;
+    font-size: .9em;
+    color:#23262F;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 10px 5px 20px;
+    height: 35px;
+    line-height: 1.2;
+    /* display: inline-block; */
+    /* vertical-align: middle;
+    display: inline-block; */
+}
+
+#time p {
+    text-transform: uppercase;
+    font-size: .2em;
+    background-color: #23262F;
+    color:#888888;
+    font-weight: bold;
+    padding: 0px 5px 0px 5px;
+    margin:0;
+}
+
+.card p {
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .8em;
+    line-height: 1.2em;
+    color:#23262F;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.card a {
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.card-header {
+    display:table;
+    flex-direction:column;
+    justify-content:center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px 6px 0px 0px;
+    width: 100%;
+    border-bottom: 1px dotted lightgrey;
+}
+
+#commentBlock p {
+    display: inline-block;
+}
+
+.username {
+    color:#c4c4c4 !important;
+}
+
+.row {
+    display: table-row;
+}
+
+.card-body img {
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    display: table-column;
+    vertical-align: middle;
+}
+
+#time {
+    /* display: none; */
+    font-family: 'brandon grotesque', sans-serif;
+    padding-top: 6px;
+    padding-left: 20px;
+    font-size: .6em;
+    color: #888888;
+}
+
+#loc {
+    font-size:.6em;
+    text-transform: uppercase;
+    border-bottom: 1px dotted lightgrey;
+}
+
+#date {
+    display: none;
+}
+
+/* DETAILED CARD STYLES ----------------------------*/
+.carddetail {
+    width: 60%;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: white;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.carddetail h3 {
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: 1.2em;
+    color:#23262F;
+    background-color: rgb(224, 224, 224);
+    border-radius: 6px 6px 0px 0px;
+    padding: 20px 50px 10px 30px;
+    height: 35px;
+    vertical-align: middle;
+}
+
+.carddetail h6 {
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .8em;
+    color:#23262F;
+    padding: 30px 30px 0px 30px;
+    vertical-align: middle;
+}
+
+.carddetail p {
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: 1em;
+    line-height: 1.2em;
+    color:#23262F;
+    padding: 10px 30px 30px 30px;
+}
+
+.carddetail .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* #editCardModal {
+    position: relative;
+} */
+
+.editClose {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: red;
+}
+
+.carddetail a {
+    text-decoration: none;
+}
+
+#eventImg {
+    display: block;
+}
+
+.carddetail#time {
+    display: none;
+}
+
+.carddetail#date {
+    display: none;
+}
+
+.cardDelBtn {
+    width: 6em;
+    margin: 15px;
+}
+
+#cardImg {
+    height: 200px;
+    object-fit: contain;
+}
+
+#newComment {
+    margin: 30px;
+}
+
+.commentDelBtn {
+    width: 6em;
+    height: 2.2em;
+    margin: 15px;
+    border: 1px solid #e0e0e0;
+    color:rgb(132, 132, 132);
+    background-color:white;
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .6em;
+    padding: 0;
+    margin:0;
+    border-radius: 6px 0 0 6px;
+    align-self: center;
+}
+
+.editComBtn {
+    width: 6em;
+    height: 2.2em;
+    margin: 15px;
+    border: 1px solid #e0e0e0;
+    color:rgb(132, 132, 132);
+    background-color:white;
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .6em;
+    padding: 0;
+    margin:0;
+    border-radius: 0 6px 6px 0;
+    align-self: center;
+}
+
+.editComBtnCommit {
+    display: none;
+    width: 5em;
+    /* height: 2.2em; */
+    border: 1px solid rgb(140, 140, 140);
+    color:rgb(140, 140, 140);
+    background-color:rgb(240, 240, 240);
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .6em;
+    padding: 0;
+    margin:5px 0 5px 0px;
+    line-height: 6em;
+    justify-content: center;
+    border-radius: 0px 6px 6px 0px;
+}
+
+#commentBlock {
+    padding: 5px 10px 0px 30px;
+    border-top: 1px dotted lightgrey;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+}
+
+#editComment {
+    border-radius: 6px 0 0 6px;
+    margin-right: 0px;
+}
+
+#editCommentBlock {
+    padding: 5px 10px 0px 30px;
+    border-top: 1px dotted lightgrey;
+    display: none;
+    width: 80%;
+    justify-content: space-between;
+    align-items: stretch;
+    display: none;
+    /* flex-direction: column; */
+}
+
+#editCardPut {
+    width: 30%;
+    height: 48px;
+    margin: 10px 0 10px 0;
+}
+
+#commentBlock p {
+    color: rgb(132, 132, 132);
+    font-size: .8em;
+    line-height: 1.5em;
+    /* width: 85%; */
+    padding: 5px 10px 10px 0px;
+    /* margin: 0; */
+}
+
+#newCommentForm {
+    display:flex;
+    align-content:space-between;
+    min-height: 70px;
+}
+
+#newComment {
+    border: 0;
+    border-radius: 0 0 6px 6px;
+    background-color: #eeeeee; 
+    padding-left:30px;
+    padding-top:10px;
+    border-top: 1px solid lightgrey;
+    margin:0;
+    width: 100%;
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: .9em;
+    resize: none;
+}
+
+#newCommentForm button {
+    width: 6em;
+    border-radius: 0 0 6px 0;
+    font-family: 'material icons';
+    color:#f18b86;
+    padding:5px;
+}
+
+/* ------------------------------------------- */
+
+
+#newCardPost {
+    width: 30%;
+    height: 48px;
+    border-radius:6px;
+    margin: 10px 0 10px 0;
+}
+
+#footer {
+    display:flex;
+    justify-content:space-between;
+    width:90%;
+}
+
+
+#newCardName, #newCardTime, #newCardDate, #newCardDescription {
+    width:90%;
+    border: 1px solid rgb(132, 132, 132);
+    border-radius:6px;
+    font-family: 'brandon grotesque', sans-serif;
+    color: #23262F;
+}
+
+#form {
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    padding-top:100px;
+}
+
+#form h3 {
+    font-family: 'brandon grotesque', sans-serif;
+    font-size: 1.8em;
+    line-height: 1.2em;
+    color:#23262F;
+    margin-bottom: 30px;
+}
+
+#loginEmail {
+    width:100%;
+}
+
+#loginPassword {
+    width:100%;
+}
+
+#upload_widget {
+    width: 30%;
+    height: 48px;
+    border-radius:6px;
+    margin: 10px 0 10px 0;
+}
+
+#loginForm button {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+
+
+/* nav ul {
+    display: inline;
+}
+nav li {
+    display: inline;
+} */
+
+
+
+/* ------------------------------------------- */
+/*  MY CARD STYLING
+/* ------------------------------------------- */
+
+.mycard {
+    width: 180px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 6px;
+    background-color: #23262F;
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------- */
+/*  MODAL
+/* ------------------------------------------- */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 12;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+    border-radius: 6px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .editClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .editClose:hover,
+  .editClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* ------------------------------------------- */
+/*  FORMS
+/* ------------------------------------------- */
+
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+  }
+
+  input, textarea, select {
+    font-family: 'brandon grotesque', sans-serif;
+    width : 100%;
+    padding: 5px 5px 5px 5px;
+    margin:  5px 0 5px 0;
+    box-sizing: border-box;
+    border-radius: 6px;
+    border:1px solid rgb(140, 140, 140);
+  }
+
+  /* ----------------------------------------- */
+
